@@ -1,0 +1,77 @@
+<div class="text-layout">
+    <h1>Pipes Basicos</h1>
+    <p>
+        Pipes incluidos en Angular - Usualmente el Common Module
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-4">
+        <p-card header="uppercase"
+                [subheader]="nombreLow | uppercase ">
+            {{nombreLow | uppercase}}    
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card header="lowercase"
+                [subheader]="nombreLow | lowercase">
+            {{ nombreLow | lowercase }}    
+        </p-card>
+    </div>
+
+    <div class="col-4">
+        <p-card header="titlecase"
+                [subheader]="nombreCompleto | titlecase">
+            {{ nombreCompleto | titlecase }}    
+        </p-card>
+    </div>
+
+</div>
+
+<div class="text-layout">
+    <h1>Date | Fecha | Pipe</h1>
+    <p>
+        Pipe para mostrar fechas.
+    </p>
+</div>
+
+<div class="grid">
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li>fecha</li>
+                <li>fecha | date</li>
+                <li>fecha | date: 'short'</li>
+                <li>fecha | date: 'long'</li>
+                <li>fecha | date: 'dd/MM/yyyy HH:mm:ss'</li>
+            </ul>
+
+                <hr>
+                <ul>
+                    <li>fecha | date:'long':'GMT-8'</li>
+                    <li>fecha | date:'long':'GMT-2'</li>
+                    <li>fecha | date:'long':'' :'fr' </li>
+                </ul>
+        </p-card>
+    </div>
+
+    <div class="col-6">
+        <p-card>
+            <ul>
+                <li>{{ fecha }}</li>
+                <li>{{ fecha | date }}</li>
+                <li>{{ fecha | date :'short' }}</li>
+                <li>{{ fecha | date :'long' }}</li>
+                <li>{{ fecha | date : 'dd/MM/yyyy HH:mm:ss'}}</li>
+            </ul>
+
+            <hr>
+            <ul>
+                <li> {{fecha | date:'long':'GMT-8' :'es-AR' }}</li>
+                <li> {{fecha | date:'long':'GMT-2' }}</li>
+                <li> {{fecha | date:'long':'' :'fr' }}</li>
+            </ul>
+        </p-card>
+    </div>
+</div>
